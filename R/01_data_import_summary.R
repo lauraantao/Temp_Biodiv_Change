@@ -23,7 +23,7 @@
 
 
 ## Script (01_) imports the data, produces maps and summary plots for the biodiversity and temperature trends, 
-## as well as plot summarising time series duration, number of years sampled, etc. (e.g. Figs. 2, S1 and S2).
+## as well as plots summarising time series duration, number of years sampled, etc. (e.g. Figs. 2, S1 and S2).
 
 
 # Input is Rdata object with biodiversity change estimates, temperature change estimates, and metadata for the time series
@@ -335,7 +335,7 @@ Tchange_map_MAR <- ggplot() +
     legend.background = element_rect(fill = "transparent"),
     legend.text.align = 0.9,
     plot.subtitle = element_text(size = 10, face = "bold"))  +
-  guides(colour = guide_colourbar(title.position = "top")) #shape =  guide_legend(title.position = "top", override.aes = list(size = 3))
+  guides(colour = guide_colourbar(title.position = "top"))
 
 
 ##Terrestrial
@@ -363,7 +363,7 @@ Tchange_map_TER <- ggplot() +
     legend.background = element_rect(fill = "transparent"),
     legend.text.align = 0.9,
     plot.subtitle = element_text(size = 10, face = "bold"))  +
-  guides(colour = guide_colourbar(title.position = "top")) #shape =  guide_legend(title.position = "top", override.aes = list(size = 3))
+  guides(colour = guide_colourbar(title.position = "top"))
 
 
 # pdf(width = 7.25, height = 8, file = "FigS1mar_ter.pdf")
@@ -430,8 +430,8 @@ SRchange_map_TER <- ggplot() +
 
 
 #pdf(width = 7.25, height = 10, file = "FigS1mar_ter.pdf")
-plot_grid(Tchange_map_MAR, Tchange_map_TER,
-          SRchange_map_MAR, SRchange_map, ncol = 2)
+# plot_grid(Tchange_map_MAR, Tchange_map_TER,
+#           SRchange_map_MAR, SRchange_map, ncol = 2)
 #dev.off()
 
 
